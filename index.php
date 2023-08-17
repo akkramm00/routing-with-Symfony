@@ -61,5 +61,12 @@ class BlogController extends AbstracController
 
   the route name(blog_list) is not important for now, but it xill be essential later when generating URLS. You only have to keep in mind that each route name must be unique in the application.
 </p>
+
+ <h2>Creating Routes in YAML, XML, or PHP Files</h2>
+
+    <p>
+      Instead of defining routes in the controller classes, you can define them in a separate YAML, XML, or PHP Files. The main advantage is that theydon't require any extra dependency.
+      The main drawback is that you have to work with multiple files checking the routing of same controller action.
+    </p>
   </body>
 </html>
