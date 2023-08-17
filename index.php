@@ -56,6 +56,10 @@ class BlogController extends AbstracController
 ?>
 
   This configuration defines a route called "blog_list" that matches when the user requests the /blog URL. When the match occurs, the application runs the list() method of the BlogController class.
+
+  If you define multiple classes in the same file, Symfony only loads the routes of the first class, ignoring all the other routes
+
+  the route name(blog_list) is not important for now, but it xill be essential later when generating URLS. You only have to keep in mind that each route name must be unique in the application.
 </p>
   </body>
 </html>
