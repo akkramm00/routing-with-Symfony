@@ -68,5 +68,33 @@ class BlogController extends AbstracController
       Instead of defining routes in the controller classes, you can define them in a separate YAML, XML, or PHP Files. The main advantage is that theydon't require any extra dependency.
       The main drawback is that you have to work with multiple files checking the routing of same controller action.
     </p>
+
+    <h2>Matching HTTP Methods (Méthodes HTTP correspondantes)</h2>
+
+    <p>
+      By default, routes match any HTTP verb (GET, POST, PUT, ETC) Use the methods option to restrict the verbs each route should respond to :
+
+<?php
+// src/Controller/BlogApiController.php
+namespace App\Controller;
+
+// ...
+
+class BlogApiController extends AbstractController
+  {
+    #[Route('/api/posts/{id}' , methods: ['GET','HEAD'])]
+    public function show(int $id): Response
+    {
+      // ... return a JSON response with the post
+    }
+
+    #[Route('/api/posts/{id}' , methods: ['PUT'])]
+    public function edit(int $id): Response
+    {
+      // ... edit a post
+    }
+  }
+?>
+    </p>
   </body>
 </html>
